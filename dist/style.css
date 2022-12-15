@@ -1,0 +1,146 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    --text-color1: beige;
+    --text-color2: rgb(172, 172, 155);
+    --bg-color1: #160c04a6;
+    --box-shadow-color1: rgba(80, 80, 73, 0.247);
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Dancing Script', cursive;
+}
+
+#content{
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+
+nav{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color1);
+    width: 100%;
+    height: 20vh;
+    border-bottom: 1px solid;
+    z-index: 10;
+}
+nav h1{
+    font-size: 3.5rem;
+    color: var(--text-color1);
+}
+nav .buttonsDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    padding: 1%;
+}
+nav button{
+    color: var(--text-color1);
+    border: none;
+    background-color: transparent;
+    font-size: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav .active{
+    text-decoration: underline;
+}
+nav button:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.imgsHomeContainer{
+    background-image: url('imgs/restaurant.png');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.manoelDiv, .rockDiv{
+    box-shadow: 0 0 10px 8px var(--box-shadow-color1);
+    border-radius: 15px;
+    padding: 2%;
+    color: var(--text-color1);
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: floating ease 10s infinite;
+    background-color: var(--bg-color1);
+    width: 35vw;
+    height: 50vh;
+    filter: grayscale(70%);
+}
+.manoelDiv:hover, .rockDiv:hover{
+    scale: 1.05;
+    cursor: pointer;
+    filter: grayscale(10%);
+}
+
+.imgOwner{
+    height: 40vh;
+    padding: 1%;
+}
+
+@keyframes floating{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+.secondSection{
+    width: 100%;
+    height: 100vh;
+    background-color: #2e231a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    gap: 5%;
+}
+.teste{
+    width: 30%;
+}
+
+.secondSectionTextsDiv{
+    width: 50%;
+    padding: 1%;
+}
+.secondSectionTitle{
+    color: var(--text-color2);
+    display: flex; 
+    justify-content: center;
+    font-size: 2.8rem;
+    padding: 1%;
+}
+
+.secondSectionText{
+    color: var(--text-color2);
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
