@@ -33,7 +33,7 @@ function createHome(){
     const secondSection = document.createElement('div');
     secondSection.classList.add("secondSection");
     const testeImg = document.createElement('img');
-    testeImg.setAttribute('src', 'imgs/teste.jpg');
+    testeImg.setAttribute('src', 'imgs/rockmanoel.png');
     testeImg.classList.add('teste')
     secondSection.appendChild(testeImg)
 
