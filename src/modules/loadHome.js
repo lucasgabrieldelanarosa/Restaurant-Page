@@ -1,8 +1,15 @@
-function createHome(){
+import loadPage from "./loadPage"
 
+function createHomeContainer(){
+    const homeContainer = document.createElement('div')
+    homeContainer.setAttribute('id', 'homeContainer')
+    content.appendChild(homeContainer)
+}
+function createImgsDiv(){
+    const homeContainer = document.getElementById('homeContainer')
     const imgsDiv = document.createElement('div')
     imgsDiv.classList.add('imgsHomeContainer')
-
+    
     const manoelDiv = document.createElement('div')
     manoelDiv.classList.add('manoelDiv')
     const manoelImg = document.createElement('img')
@@ -27,14 +34,16 @@ function createHome(){
 
     imgsDiv.append(manoelDiv, rockDiv)
 
-    const content = document.querySelector('#content');
-    content.appendChild(imgsDiv)
+    homeContainer.appendChild(imgsDiv)
+}
 
+function createSecondSection(){
+    const homeContainer = document.getElementById('homeContainer')
     const secondSection = document.createElement('div');
     secondSection.classList.add("secondSection");
     const testeImg = document.createElement('img');
     testeImg.setAttribute('src', 'imgs/rockmanoel.png');
-    testeImg.classList.add('teste')
+    testeImg.classList.add('rockManoelImg')
     secondSection.appendChild(testeImg)
 
     const secondSectionTitle = document.createElement('h2');
@@ -51,7 +60,15 @@ function createHome(){
     secondSectionTextsDiv.append(secondSectionTitle, secondSectionText)
 
     secondSection.appendChild(secondSectionTextsDiv)
-    content.appendChild(secondSection)
+    
+    homeContainer.appendChild(secondSection)
 }
 
-export default createHome
+function loadHome(){
+    loadPage()
+    createHomeContainer()
+    createImgsDiv()
+    createSecondSection()
+}
+
+export default loadHome
