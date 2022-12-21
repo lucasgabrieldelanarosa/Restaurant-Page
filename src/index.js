@@ -57,7 +57,7 @@ function addNavEvents() {
     contactButton.addEventListener('click', activeContactBtn)
 }
 function init(){
-    loadMenu();
+    loadHome();
     addNavEvents();
     activeHomeBtn();
 }

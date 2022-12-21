@@ -12,6 +12,7 @@
     --bg-color1: #160c04a6;
     --bg-color2: rgb(182, 182, 163);
     --box-shadow-color1: rgba(80, 80, 73, 0.247);
+    --box-shadow-color2: rgba(112, 112, 88, 0.486);
 }
 body{
     width: 100%;
@@ -143,7 +144,6 @@ nav button:hover{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 .menuContainer{
     position: relative;
     top: 20vh;
@@ -151,19 +151,23 @@ nav button:hover{
     width: 100%;
     overflow-y: scroll;
     display: flex;
+    justify-content: center;
 }
 
 .foodContainer{
     background-color: var(--bg-color1);
+    box-shadow: 0 0 10px 8px var(--box-shadow-color2);
     width: 60%;
     height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1%;
+    margin: 1%;
 }
 
 .food{
+    box-shadow: 0 0 10px 8px var(--box-shadow-color2);
     height: 40vh;
     width: 70%;
     margin: 2%;
@@ -178,6 +182,13 @@ nav button:hover{
     width: 45%;
     height: 80%;
 }
+.food img:hover{
+    cursor: pointer;
+    scale: 1.05;
+}
+.food div{
+    padding: 10%;
+}
 .food h3{
     font-size: 2rem;
 }
@@ -185,6 +196,34 @@ nav button:hover{
     font-size: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.contactContainer{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactsContainer{
+    background-color: var(--bg-color1);
+    box-shadow: 0 0 10px 8px var(--box-shadow-color2);
+    width: 60%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1%;
+    padding: 1%;
+    color: var(--text-color2);
+}
+.contactContainer h1{
+    font-size: 2.5rem;
+}
+.contactContainer p{
+    font-size: 1.8rem;
+}
+
 @keyframes floating{
     0%{
         transform: translateY(0);
